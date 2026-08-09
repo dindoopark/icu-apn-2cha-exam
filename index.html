@@ -385,6 +385,22 @@ body{background:var(--bg2)}
 .yr{width:100%; border-collapse:collapse; font-size:13px; margin:6px 0 14px}
 .yr th,.yr td{border:1px solid var(--line); padding:6px 9px; text-align:left}
 .yr th{background:var(--bg3); font-weight:800}
+/* ---------- 모바일 ---------- */
+@media screen and (max-width:640px){
+  .wrap{padding:24px 14px 64px}
+  .top h1{font-size:22px}
+  .top p{font-size:14px}
+  .fcard{gap:12px; padding:16px 14px; border-radius:12px}
+  .fnum{width:32px; height:32px; font-size:15px; border-radius:9px}
+  .fbody h3{font-size:16.5px}
+  .fdesc{font-size:13.5px}
+  .notebox{padding:16px 14px}
+  /* 연도표: 연도 열이 "20/19"로 쪼개지지 않게 하고, 넘치면 가로로 밀 수 있게 */
+  .yrwrap{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px -2px 14px}
+  .yr{font-size:12px; margin:0}
+  .yr th,.yr td{padding:6px 7px}
+  .yr th:first-child,.yr td:first-child{white-space:nowrap; width:1%}
+}
 </style>
 </head>
 <body>
@@ -401,7 +417,7 @@ body{background:var(--bg2)}
     <h4>이 시험이 어떻게 나오는가</h4>
     <p><b>사례기반 서술형 필기시험, 총 2사례 100점</b>(사례당 50점). 1·2차 모두 60점 이상이어야 합격합니다.
        매년 <b>계통 2가지</b>에서 각 1사례가 나오고, 소문항은 4개 내외입니다.</p>
-    <table class="yr">
+    <div class="yrwrap"><table class="yr">
       <tr><th>연도</th><th>계통 ①</th><th>계통 ②</th></tr>
       <tr><td>2019</td><td>신경계 — SAH · TCD · Triple-H</td><td>순환기 — PSVT · 심율동전환</td></tr>
       <tr><td>2020</td><td>비뇨기계 — AKI · ABGA · 고칼륨 · <b>투석불균형증후군</b></td><td>신경계 — SDH · EVD 영점 · ICP 파형</td></tr>
@@ -410,7 +426,7 @@ body{background:var(--bg2)}
       <tr><td>2023</td><td>순환기 — 대동맥박리 → 술후 심장압전</td><td>혼합 — 신장이식 후 패혈증 → CRRT → ARDS</td></tr>
       <tr><td>2024</td><td>순환기 — STEMI → PCI 후 심인성 폐부종</td><td>신경계 — SAH · 혈관연축</td></tr>
       <tr><td>2025</td><td>기타(내분비) — DKA · anion gap · 저칼륨</td><td>호흡기 — COPD 악화 → CO₂ 마취 → ARDS</td></tr>
-    </table>
+    </table></div>
     <p>소문항은 늘 같은 네 가지 틀입니다 —
        <b>①진단명과 근거를 모두 ②가장 먼저 할 치료적 중재와 근거 ③모니터링·간호중재 3가지 이상
        ④조절 가능한 위험인자와 교육 또는 금기증과 적용 시 간호.</b>
